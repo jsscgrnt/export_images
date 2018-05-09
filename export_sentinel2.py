@@ -5,12 +5,7 @@ import os
 import socket
 print('current computer:', socket.gethostname())
 
-print os.getcwd()
-wd = os.getcwd()
-wd = wd.split('/')
-wd = '/'.join(wd[:(len(wd) - 2)])
-print wd
-sys.path.append(wd)
+sys.path.append(sys.argv[1])
 from gee_basic import exporter, Task, basic
 
 Task.cwa = basic.cwa
@@ -18,7 +13,7 @@ Task.ee = ee
 
 basic.ee = ee
 
-sys.path.append(sys.argv[1])
+sys.path.append(sys.argv[2])
 import config_sentinel2 as config
 # check argparse, for future versions
 
