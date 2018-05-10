@@ -14,7 +14,7 @@ Task.ee = ee
 basic.ee = ee
 
 sys.path.append(sys.argv[2])
-import config_sentinel2 as config
+import config_landsat as config
 # check argparse, for future versions
 
 
