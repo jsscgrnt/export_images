@@ -14,7 +14,7 @@ end_date = '2018-12-01'
 # CRS
 # codigo EPSG (escrever EPSG maiusculo), ver http://spatialreference.org/
 # exemplo: crs = 'EPSG:4326'
-crs = 'EPSG:4326'
+crs = 'EPSG:31983'
 
 # TAMANHO DO PIXEL
 # tamanho que o pixel da imagem de saida vai ter
@@ -32,13 +32,13 @@ scale = 20
 # #     '23KQT',
 # #     '23KQU'
 # # ]
-tiles = None
-# tiles = [
-#     '23KPT',
-#     '23KPU',
-#     '23KQT',
-#     '23KQU'
-# ]
+# tiles = None
+tiles = [
+    '23KPT',
+    '23KPU',
+    '23KQT',
+    '23KQU'
+]
 # caso se saiba apriori quais imagens devem ser exportadas,
 # as imagens podem ser informadas como um lista de strings ver *
 # note que se 'images' e 'tiles' sao mutualmente exclusivos**.
@@ -48,20 +48,20 @@ tiles = None
 #     'COPERNICUS/S2/20160713T130431_20160713T192011_T23KPT',
 #     'COPERNICUS/S2/20160713T130431_20160713T192011_T23KPU'
 # ] ou images = None
-images = [
-    'COPERNICUS/S2/20160713T130431_20160713T192011_T23KPT',
-    'COPERNICUS/S2/20160713T130431_20160713T192011_T23KPU',
-    'COPERNICUS/S2/20160713T130431_20160713T192011_T23KQT',
-    'COPERNICUS/S2/20160713T130431_20160713T192011_T23KQU',
-    'COPERNICUS/S2/20160802T130656_20160802T193908_T23KPU',
-    'COPERNICUS/S2/20170330T130241_20170330T130532_T23KPT',
-    'COPERNICUS/S2/20170723T130249_20170723T130633_T23KQT',
-    'COPERNICUS/S2/20170723T130249_20170723T130633_T23KQU',
-    'COPERNICUS/S2/20170817T130251_20170817T130509_T23KPT',
-    'COPERNICUS/S2/20170817T130251_20170817T130509_T23KPU',
-    'COPERNICUS/S2/20170817T130251_20170817T130509_T23KQU'
-]
-# images = None
+# images = [
+#     'COPERNICUS/S2/20160713T130431_20160713T192011_T23KPT',
+#     'COPERNICUS/S2/20160713T130431_20160713T192011_T23KPU',
+#     'COPERNICUS/S2/20160713T130431_20160713T192011_T23KQT',
+#     'COPERNICUS/S2/20160713T130431_20160713T192011_T23KQU',
+#     'COPERNICUS/S2/20160802T130656_20160802T193908_T23KPU',
+#     'COPERNICUS/S2/20170330T130241_20170330T130532_T23KPT',
+#     'COPERNICUS/S2/20170723T130249_20170723T130633_T23KQT',
+#     'COPERNICUS/S2/20170723T130249_20170723T130633_T23KQU',
+#     'COPERNICUS/S2/20170817T130251_20170817T130509_T23KPT',
+#     'COPERNICUS/S2/20170817T130251_20170817T130509_T23KPU',
+#     'COPERNICUS/S2/20170817T130251_20170817T130509_T23KQU'
+# ]
+images = None
 
 # GEOMETRIA
 # geometria para cortar todos os tiles, polygon nao multipolygons
@@ -75,7 +75,7 @@ geometry_buff = 5000
 # PASTA DE SAIDA
 # nome da pasta para qual as imagens vao ser exportadas
 # exemplo: folder_name = 'sao_domingos_do_prata'
-folder = 'pao'
+folder = 'sao_domingos_do_prata_all_31983'
 
 # DESIRED BANDS
 # informe as bandas desejadas no formato de lista de strings ver *
