@@ -14,7 +14,7 @@ end_date = '2018-12-01'
 # CRS
 # codigo EPSG (escrever EPSG maiusculo), ver http://spatialreference.org/
 # exemplo: crs = 'EPSG:4326'
-crs = 'EPSG:4326'
+crs = 'EPSG:31983'
 
 # TAMANHO DO PIXEL
 # tamanho que o pixel da imagem de saida vai ter
@@ -66,7 +66,7 @@ geometry_buff = 5000
 # PASTA DE SAIDA
 # nome da pasta para qual as imagens vao ser exportadas
 # exemplo: folder_name = 'sao_domingos_do_prata'
-folder = 'sao_domingos_all'
+folder = 'sao_domingos_all_31983'
 
 # DESIRED BANDS
 # informe as bandas desejadas no formato de lista de strings ver *
