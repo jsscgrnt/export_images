@@ -34,7 +34,8 @@ def make_name_out(i):
     bands = [k[1:] for k in config.desired_bands[sat]]
     bands = ''.join(bands)
 
-    name = '_'.join([spacecraft, date,  tile, bands, cc])
+    # name = '_'.join([spacecraft, date,  tile, bands, cc])
+    name = '_'.join([spacecraft, date,  tile,  cc])
 
     return name
 
@@ -63,8 +64,8 @@ tasks = {}
 
 collections = {
     '8': 'LANDSAT/LC08/C01/T1_SR',
-    '7': 'LANDSAT/LE07/C01/T1_SR',
-    '5': 'LANDSAT/LT05/C01/T1_SR'
+    # '7': 'LANDSAT/LE07/C01/T1_SR',
+    # '5': 'LANDSAT/LT05/C01/T1_SR'
 }
 
 if config.tiles != config.images:
