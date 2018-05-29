@@ -94,7 +94,7 @@ images = [
 # se geometry=None, entao o tile inteiro sera exportado
 # exemplo: geometry = 'users/cnp_rafael/buffer_50km'
 # geometry = 'users/cnp_rafael/buffer_50km'
-geometry = None
+geometry = 'users/leon_cnp/RJ_buff5'
 # GEOMETRY BUFFER
 # geometry_buff = 5000
 geometry_buff = None
@@ -102,7 +102,7 @@ geometry_buff = None
 # PASTA DE SAIDA
 # nome da pasta para qual as imagens vao ser exportadas
 # exemplo: folder_name = 'sao_domingos_do_prata'
-folder = 'rj_leon_31983'
+folder = 'rj_roi_leon_31983'
 
 # DESIRED BANDS
 # informe as bandas desejadas no formato de lista de strings ver *
