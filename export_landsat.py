@@ -5,7 +5,10 @@ import os
 import socket
 print('current computer:', socket.gethostname())
 
-sys.path.append(sys.argv[1])
+add_path = os.getcwd()
+add_path = add_path.split('/')
+add_path = '/'.join(add_path[:-1])
+sys.path.append(add_path)
 from gee_basic import exporter, Task, basic
 
 Task.cwa = basic.cwa
@@ -13,9 +16,14 @@ Task.ee = ee
 
 basic.ee = ee
 
-sys.path.append(sys.argv[2])
-import config_landsat as config
+import config_sentinel2 as config
 # check argparse, for future versions
+
+
+def uni(ft, pre):
+
+    union = ft.union(pre)
+    return union
 
 
 def make_name_out(i):
@@ -48,8 +56,9 @@ crs_descriptor = basic.CRS(
 )
 
 if config.geometry is not None:
-    config.geometry = ee.FeatureCollection(config.geometry)
-    config.geometry = ee.Feature(config.geometry.first()).geometry()
+    fc = ee.FeatureCollection(config.geometry)
+    config.geometry = ee.Feature(fc.iterate(uni, ee.Feature(fc.first())))
+    config.geometry = config.geometry.geometry()
     if config.geometry_buff is not None:
         config.geometry = config.geometry.buffer(config.geometry_buff)
 
