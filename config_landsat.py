@@ -74,7 +74,7 @@ folder = 'exports_bruno_oli_32723'
 # ver https://landsat.gsfc.nasa.gov/sentinel-2a-launches-our-compliments-our-complements/
 # exemplo: desired_bands = ['B8A', 'B11', 'B4']
 desired_bands = {
-    '8': ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B10', 'B11', 'sr_aerosol', 'pixel_qa', 'radsat_qa'],
+    '8': ['B5', 'B6', 'B4'],
     '7': ['B4', 'B5', 'B3'],
     '5': ['B4', 'B5', 'B3']
 }
