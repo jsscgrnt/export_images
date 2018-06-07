@@ -16,7 +16,7 @@ Task.ee = ee
 
 basic.ee = ee
 
-import config_sentinel2 as config
+import config_landsat as config
 # check argparse, for future versions
 
 
